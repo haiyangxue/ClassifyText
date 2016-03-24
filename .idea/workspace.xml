@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/../../WekaPreprocess/Preprocess.h" description="int GetManyVSM(int begin,int end,string tablename,..." line="102" />
-  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" assignedExecutableTargets="true" buildAllGenerated="true">
     <generated>
-      <config projectName="Project" targetName="demo" />
+      <config projectName="TextClassification" targetName="TextClassification" />
       <config projectName="Project" targetName="test.run" />
+      <config projectName="Project" targetName="demo" />
       <config projectName="Project" targetName="load_test" />
     </generated>
   </component>
@@ -16,7 +14,70 @@
     </ADDITIONAL_GENERATION_ENVIRONMENT>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d14a7ea1-6eca-4b0d-b960-ae38a888153c" name="Default" comment="" />
+    <list default="true" id="d14a7ea1-6eca-4b0d-b960-ae38a888153c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/test.prop" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/utils.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/utils.h" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dict/corpus.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dict/test.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PreProcess.o" afterPath="$PROJECT_DIR$/PreProcess.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TextClassification.o" afterPath="$PROJECT_DIR$/TextClassification.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main" afterPath="$PROJECT_DIR$/main" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/test.iml" afterPath="$PROJECT_DIR$/.idea/test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PreProcess.cpp" afterPath="$PROJECT_DIR$/PreProcess.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PreProcess.h" afterPath="$PROJECT_DIR$/PreProcess.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TextClassification.cpp" afterPath="$PROJECT_DIR$/TextClassification.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/DictTrie.hpp" afterPath="$PROJECT_DIR$/cppjieba/DictTrie.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/FullSegment.hpp" afterPath="$PROJECT_DIR$/cppjieba/FullSegment.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/HMMModel.hpp" afterPath="$PROJECT_DIR$/cppjieba/HMMModel.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/HMMSegment.hpp" afterPath="$PROJECT_DIR$/cppjieba/HMMSegment.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/Jieba.hpp" afterPath="$PROJECT_DIR$/cppjieba/Jieba.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/KeywordExtractor.hpp" afterPath="$PROJECT_DIR$/cppjieba/KeywordExtractor.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/LevelSegment.hpp" afterPath="$PROJECT_DIR$/cppjieba/LevelSegment.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/MPSegment.hpp" afterPath="$PROJECT_DIR$/cppjieba/MPSegment.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/MixSegment.hpp" afterPath="$PROJECT_DIR$/cppjieba/MixSegment.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/PosTagger.hpp" afterPath="$PROJECT_DIR$/cppjieba/PosTagger.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/PreFilter.hpp" afterPath="$PROJECT_DIR$/cppjieba/PreFilter.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/Preprocess.h" afterPath="$PROJECT_DIR$/cppjieba/Preprocess.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/QuerySegment.hpp" afterPath="$PROJECT_DIR$/cppjieba/QuerySegment.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/SegmentBase.hpp" afterPath="$PROJECT_DIR$/cppjieba/SegmentBase.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/TransCode.hpp" afterPath="$PROJECT_DIR$/cppjieba/TransCode.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/Trie.hpp" afterPath="$PROJECT_DIR$/cppjieba/Trie.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/common.h" afterPath="$PROJECT_DIR$/cppjieba/common.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/ArgvContext.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/ArgvContext.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/BlockingQueue.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/BlockingQueue.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/BoundedBlockingQueue.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/BoundedBlockingQueue.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/BoundedQueue.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/BoundedQueue.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/Closure.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/Closure.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/Colors.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/Colors.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/Condition.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/Condition.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/Config.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/Config.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/FileLock.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/FileLock.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/ForcePublic.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/ForcePublic.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/LocalVector.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/LocalVector.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/Logging.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/Logging.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/Md5.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/Md5.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/MutexLock.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/MutexLock.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/NonCopyable.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/NonCopyable.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/StdExtension.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/StdExtension.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/StringUtil.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/StringUtil.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/Thread.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/Thread.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/ThreadPool.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/ThreadPool.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/README.md" afterPath="$PROJECT_DIR$/dict/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/hmm_model.utf8" afterPath="$PROJECT_DIR$/dict/hmm_model.utf8" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/idf.utf8" afterPath="$PROJECT_DIR$/dict/idf.utf8" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/jieba.dict.utf8" afterPath="$PROJECT_DIR$/dict/jieba.dict.utf8" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/keywords" afterPath="$PROJECT_DIR$/dict/keywords" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/pos_dict/char_state_tab.utf8" afterPath="$PROJECT_DIR$/dict/pos_dict/char_state_tab.utf8" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/pos_dict/prob_emit.utf8" afterPath="$PROJECT_DIR$/dict/pos_dict/prob_emit.utf8" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/pos_dict/prob_start.utf8" afterPath="$PROJECT_DIR$/dict/pos_dict/prob_start.utf8" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/pos_dict/prob_trans.utf8" afterPath="$PROJECT_DIR$/dict/pos_dict/prob_trans.utf8" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/stop_words.utf8" afterPath="$PROJECT_DIR$/dict/stop_words.utf8" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/user.dict.utf8" afterPath="$PROJECT_DIR$/dict/user.dict.utf8" />
+    </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,31 +97,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TextClassification.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TextClassification.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TextClassification.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dict/test.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="166" column="118" selection-start-line="166" selection-start-column="118" selection-end-line="166" selection-end-column="118" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="keywords" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dict/keywords">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37815127">
-              <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.8597843">
+              <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -70,8 +111,20 @@
         <entry file="file://$PROJECT_DIR$/Makefile">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PreProcess.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PreProcess.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="76" column="85" selection-start-line="76" selection-start-column="85" selection-end-line="76" selection-end-column="85" />
+              <folding>
+                <element signature="e#45#85#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,46 +132,61 @@
       <file leaf-file-name="PreProcess.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PreProcess.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state vertical-scroll-proportion="33.8">
+              <caret line="543" column="22" selection-start-line="543" selection-start-column="22" selection-end-line="543" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KeywordExtractor.hpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cppjieba/KeywordExtractor.hpp">
+      <file leaf-file-name="utils.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/utils.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+              <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
               <folding>
-                <element signature="e#75#91#0" expanded="true" />
+                <marker date="1458722184665" expanded="true" signature="1539:2223" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Jieba.hpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cppjieba/Jieba.hpp">
+      <file leaf-file-name="keywords" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dict/keywords">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+              <caret line="1866" column="3" selection-start-line="1866" selection-start-column="3" selection-end-line="1866" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuerySegment.hpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cppjieba/QuerySegment.hpp">
+      <file leaf-file-name="utils.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/utils.h">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+              <folding>
+                <element signature="e#71#90#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.prop" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/test.prop">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -133,18 +201,25 @@
         <option value="$PROJECT_DIR$/cppjieba/Preprocess.h" />
         <option value="$PROJECT_DIR$/config.h" />
         <option value="$PROJECT_DIR$/dict/noFeature.txt" />
-        <option value="$PROJECT_DIR$/utils.h" />
         <option value="$PROJECT_DIR$/dict/stopwords.txt" />
-        <option value="$PROJECT_DIR$/dict/corpus.txt" />
         <option value="$PROJECT_DIR$/dict/stop_words.utf8" />
         <option value="$PROJECT_DIR$/cppjieba/limonp/StringUtil.hpp" />
-        <option value="$PROJECT_DIR$/PreProcess.cpp" />
-        <option value="$PROJECT_DIR$/PreProcess.h" />
         <option value="$PROJECT_DIR$/dict/keywords" />
         <option value="$PROJECT_DIR$/demo.cpp" />
         <option value="$PROJECT_DIR$/cppjieba/Jieba.hpp" />
-        <option value="$PROJECT_DIR$/dict/test.txt" />
         <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/dict/corpus.txt" />
+        <option value="$PROJECT_DIR$/dict/test.txt" />
+        <option value="$PROJECT_DIR$/utils/properties.cpp" />
+        <option value="$PROJECT_DIR$/utils/properties.h" />
+        <option value="$PROJECT_DIR$/utils/remane.cpp" />
+        <option value="$PROJECT_DIR$/utils/utils.h" />
+        <option value="$PROJECT_DIR$/utils.h" />
+        <option value="$PROJECT_DIR$/utils.cpp" />
+        <option value="$PROJECT_DIR$/utils/utils.cpp" />
+        <option value="$PROJECT_DIR$/utils/test.prop" />
+        <option value="$PROJECT_DIR$/PreProcess.h" />
+        <option value="$PROJECT_DIR$/PreProcess.cpp" />
         <option value="$PROJECT_DIR$/TextClassification.cpp" />
       </list>
     </option>
@@ -194,21 +269,50 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TextClassification" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../cppjieba-master/cppjieba/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="SearchEverywhereHistoryKey" value="format&#9;ACTION&#9;ReformatCode&#10;form&#9;ACTION&#9;ReformatCode" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="72" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="89" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="94" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="926" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="71" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="89" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="95" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="926" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/dict" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/cppjieba" />
       <recent name="$PROJECT_DIR$/dict" />
     </key>
@@ -255,11 +359,16 @@
       <envs />
       <method />
     </configuration>
-    <list size="4">
+    <configuration default="false" name="TextClassification" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="TextClassification" TARGET_NAME="TextClassification" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TextClassification" RUN_TARGET_NAME="TextClassification">
+      <envs />
+      <method />
+    </configuration>
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.demo" />
       <item index="1" class="java.lang.String" itemvalue="Application.load_test" />
       <item index="2" class="java.lang.String" itemvalue="Application.test.run" />
       <item index="3" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="4" class="java.lang.String" itemvalue="Application.TextClassification" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -277,15 +386,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1211" height="847" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2003367" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2031379" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32756326" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23197116" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12062257" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294347" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -294,7 +403,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294347" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28265107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28166914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34104937" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -312,95 +421,69 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dict/test.txt">
+    <entry file="file://$PROJECT_DIR$/TextClassification.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="166" column="118" selection-start-line="166" selection-start-column="118" selection-end-line="166" selection-end-column="118" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dict/keywords">
+    <entry file="file://$PROJECT_DIR$/PreProcess.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="629" column="4" selection-start-line="629" selection-start-column="4" selection-end-line="629" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+          <caret line="76" column="85" selection-start-line="76" selection-start-column="85" selection-end-line="76" selection-end-column="85" />
+          <folding>
+            <element signature="e#45#85#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PreProcess.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="352" column="20" selection-start-line="352" selection-start-column="20" selection-end-line="352" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cppjieba/KeywordExtractor.hpp">
+    <entry file="file://$PROJECT_DIR$/utils/utils.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
           <folding>
-            <element signature="e#75#91#0" expanded="true" />
+            <marker date="1458722184665" expanded="true" signature="1539:2223" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cppjieba/Jieba.hpp">
+    <entry file="file://$PROJECT_DIR$/dict/keywords">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <caret line="1413" column="3" selection-start-line="1413" selection-start-column="3" selection-end-line="1413" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cppjieba/QuerySegment.hpp">
+    <entry file="file://$PROJECT_DIR$/utils/utils.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-          <folding />
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="e#71#90#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TextClassification.cpp">
+    <entry file="file://$PROJECT_DIR$/utils/test.prop">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cppjieba/KeywordExtractor.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cppjieba/limonp/StringUtil.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TextClassification.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -412,13 +495,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/c++/4.9/bits/stl_algo.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4569" column="25" selection-start-line="4569" selection-start-column="25" selection-end-line="4569" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/include/c++/4.9/bits/stl_algo.h" />
     <entry file="file://$PROJECT_DIR$/cppjieba/MixSegment.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -448,13 +525,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/x86_64-linux-gnu/bits/time.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/include/x86_64-linux-gnu/bits/time.h" />
     <entry file="file://$PROJECT_DIR$/dict/jieba.dict.utf8">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -469,13 +540,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/include/boost/algorithm/string.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/local/include/boost/algorithm/string.hpp" />
     <entry file="file://$PROJECT_DIR$/cppjieba/HMMSegment.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -485,14 +550,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cppjieba/limonp/Thread.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
+        <state vertical-scroll-proportion="0.0">
           <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cppjieba/limonp/StdExtension.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2575758">
+        <state vertical-scroll-proportion="0.0">
           <caret line="70" column="49" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
         </state>
       </provider>
@@ -506,18 +571,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dict/dict_map">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.9677419">
+        <state vertical-scroll-proportion="0.0">
           <caret line="3" column="141" selection-start-line="3" selection-start-column="141" selection-end-line="3" selection-end-column="141" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/c++/4.9/tr1/unordered_set.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="172" column="10" selection-start-line="172" selection-start-column="10" selection-end-line="172" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/include/c++/4.9/tr1/unordered_set.h" />
     <entry file="file://$PROJECT_DIR$/cppjieba/DictTrie.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -527,7 +586,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cppjieba/Preprocess.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.183908">
+        <state vertical-scroll-proportion="0.0">
           <caret line="43" column="56" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
         </state>
       </provider>
@@ -539,27 +598,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/c++/4.9/bits/stl_algo.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33280757">
-          <caret line="4907" column="4" selection-start-line="4907" selection-start-column="4" selection-end-line="4907" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/4.9/bits/stl_vector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="561" column="24" selection-start-line="561" selection-start-column="24" selection-end-line="562" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/4.9/bits/stl_algobase.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24555735">
-          <caret line="455" column="4" selection-start-line="455" selection-start-column="4" selection-end-line="455" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/include/c++/4.9/bits/stl_vector.h" />
+    <entry file="file:///usr/include/c++/4.9/bits/stl_algobase.h" />
     <entry file="file://$PROJECT_DIR$/dict/stop_words.utf8">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -567,131 +607,146 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38933763">
-          <caret line="398" column="8" selection-start-line="398" selection-start-column="8" selection-end-line="398" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/4.9/bits/stl_map.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33279485">
-          <caret line="95" column="10" selection-start-line="95" selection-start-column="10" selection-end-line="95" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dict/corpus.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="388.75">
-          <caret line="421" column="428" selection-start-line="421" selection-start-column="428" selection-end-line="421" selection-end-column="428" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PreProcess.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cppjieba/limonp/StringUtil.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cppjieba/KeywordExtractor.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
-          <folding>
-            <element signature="e#75#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h" />
     <entry file="file://$PROJECT_DIR$/cppjieba/PosTagger.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0022857143">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cppjieba/QuerySegment.hpp">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cppjieba/MPSegment.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0022857143">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cppjieba/LevelSegment.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.061714284">
+        <state vertical-scroll-proportion="0.0">
           <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dict/idf.utf8">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cppjieba/limonp/StringUtil.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="147" column="19" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cppjieba/Jieba.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cppjieba/QuerySegment.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="56" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/x86_64-linux-gnu/bits/mathcalls.h" />
+    <entry file="file:///usr/include/c++/4.9/bits/stl_map.h" />
+    <entry file="file:///usr/include/c++/4.9/bits/stl_algo.h" />
+    <entry file="file://$PROJECT_DIR$/cppjieba/KeywordExtractor.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/4.9/string">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/utils.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="e#71#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/utils.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+          <folding>
+            <marker date="1458722184665" expanded="true" signature="1539:2223" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dict/keywords">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1866" column="3" selection-start-line="1866" selection-start-column="3" selection-end-line="1866" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dict/idf.utf8">
+    <entry file="file://$PROJECT_DIR$/utils/test.prop">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5120.6196">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PreProcess.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="85" selection-start-line="76" selection-start-column="85" selection-end-line="76" selection-end-column="85" />
+          <folding>
+            <element signature="e#45#85#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dict/test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="166" column="118" selection-start-line="166" selection-start-column="118" selection-end-line="166" selection-end-column="118" />
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PreProcess.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="33.8">
+          <caret line="543" column="22" selection-start-line="543" selection-start-column="22" selection-end-line="543" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TextClassification.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dict/keywords">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37815127">
-          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.8597843">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
           <folding />
         </state>
       </provider>

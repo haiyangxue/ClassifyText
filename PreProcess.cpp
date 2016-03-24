@@ -2,7 +2,7 @@
 
 using namespace std;
 
-
+map<int,double>idfs;
 class GT_cls {
 public:
     GT_cls(string &s) : comparepart(s) { }
@@ -44,25 +44,7 @@ void trim(string &str, const string val) {
     str.erase(str.find_last_not_of(val) + val.size());
 }
 
-void split(const string &src, const string &separator, vector<string> &dest) {
-    string str = src;
-    string substring;
-    string::size_type start = 0, index;
 
-    do {
-        index = str.find_first_of(separator, start);
-        if (index != string::npos) {
-            substring = str.substr(start, index - start);
-            dest.push_back(substring);
-            start = str.find_first_not_of(separator, index);
-            if (start == string::npos) return;
-        }
-    } while (index != string::npos);
-
-    //the last token
-    substring = str.substr(start);
-    dest.push_back(substring);
-}
 /************************************************************************/
 /* 构造停用词表                                                                     */
 /************************************************************************/
@@ -76,49 +58,70 @@ unordered_set<string> PreProcess::MakeStopSet() {
         stopwordsSet.insert(temp);
     }
     ifile.close();
-//    ofstream outfile;
-//    outfile.open(NEWSOUT_PATH, ios::out | ios::trunc);
-//    // 使用迭代器 iterator 访问值
-//    unordered_set<string>::iterator sett = stopwordsSet.begin();
-//    while (sett != stopwordsSet.end()) {
-//        cout<<*sett<<endl;
-//        outfile<<*sett<<endl;
-//        sett++;
-//    }
-//
-//
-//    outfile.close();//关闭文件
-
     return stopwordsSet;
 }
 
 //对语料进行预处理，主要是提取出每条文本的类别和文本的内容
 
-void PreProcess::preProcessedText(vector<string> lables, const char *corpusPath, const string &connector,
+void PreProcess::preProcessedText(vector<string> &lables, map<string,string> &filesPath,
                                   vector<string> &news, map<string, vector<int> > &articleIdinEachClass,
                                   map<int, string> &idToLable) {
+    set<string> lableset;
     news.clear();
     articleIdinEachClass.clear();
-    ifstream fin(corpusPath);
-    string str;
-    vector<string> temp;
     int index = 0;
-    while (getline(fin, str)) {
-        temp.clear();
+    for(map<string,string>::iterator it=filesPath.begin();it!=filesPath.end();it++){
         index++;
-        split(str, connector, temp);
-        news.push_back(temp[1]);
-        idToLable[index] = temp[0];
-        articleIdinEachClass[temp[0]].push_back(index);
-//        for (vector<string>::iterator strit = lables.begin(); strit != lables.end(); strit++) {
-//            articleIdinEachClass[*strit].push_back(index);
+        ifstream fin((it->first).c_str());
+        lableset.insert(it->second);
 
-//        }
+        string article;
+        while (!fin.eof()) {
+            char buffer[1024*10*6];
+            fin>>buffer;
+            article+=buffer;
+        }
+        fin.close();
+        news.push_back(article);
+        idToLable[index] = it->second;
+        articleIdinEachClass[it->second].push_back(index);
     }
-    fin.close();
+    for (set<string>::iterator it = lableset.begin(); it != lableset.end(); it++) {
+        lables.push_back(*it);
+    }
+    filesPath.clear();
+//    copy(lableset.begin(), lableset.end(), lables.begin());//
+
 }
 
-//分词
+//对语料进行预处理，主要是提取出每条文本的类别和文本的内容
+
+void PreProcess::preProcessedText( map<string,string> &filesPath,vector<string> &news, map<string, vector<int> > &articleIdinEachClass,
+                                   map<int, string> &idToLable) {
+    news.clear();
+    articleIdinEachClass.clear();
+    int index = 0;
+    ofstream ofile("dict/vsmmmmmm",ios::binary);
+
+    for(map<string,string>::iterator it=filesPath.begin();it!=filesPath.end();it++){
+        index++;
+        ifstream fin((it->first).c_str());
+        string article;
+        while (!fin.eof()) {
+            char buffer[1024*10*6];
+            fin>>buffer;
+            article+=buffer;
+        }
+        ofile <<article<<endl;
+        fin.close();
+        news.push_back(article);
+        idToLable[index] = it->second;
+        articleIdinEachClass[it->second].push_back(index);
+    }
+    ofile.close();
+}
+
+//分词并构建词袋模型
 void PreProcess::CutWords(vector<string> news, unordered_set<string> stopwords, DICTIONARY &mymap) {
     cppjieba::Jieba jieba(DICT_PATH, HMM_PATH, USER_DICT_PATH);
     int i = 0;
@@ -129,45 +132,11 @@ void PreProcess::CutWords(vector<string> news, unordered_set<string> stopwords, 
         words.clear();
         i++;
         jieba.CutForSearch(*v, words);
-//        string aa=limonp::Join(words.begin(), words.end(), "/",stopwords);
         vector<string> wordcollection = limonp::Seg(words.begin(), words.end(), stopwords);
         ConstructDictionary(mymap, wordcollection, i);
         v++;
     }
 }
-
-
-/************************************************************************/
-/* 加载词典信息到内存
-/************************************************************************/
-void PreProcess::LoadDictionary(DICTIONARY &mymap, const char *address) {
-    // 在这里使用std::ifstream 或者 std::fstream
-    ifstream infile(address, ios::binary);
-    int lenMyMap;//保存词典长度
-    string lenVector_s;//保存每个词出现的文章数目
-    int lenVector;
-    string key;//保存读出的map的键值
-    string articleId_s;//文章标号
-    int articleId;
-    string count_s;//在该文章中刚出现的数目
-    int count;
-    string semicolon;
-    infile >> lenMyMap;
-    int j = 0;
-    while (!infile.eof()) {
-        infile >> key;
-        infile >> lenVector_s;
-        vector<pair<int, int> > temp;
-        lenVector = atoi(lenVector_s.c_str());
-        for (int i = 0; i < lenVector; i++) {
-            infile >> articleId_s >> count_s >> semicolon;
-            temp.push_back(make_pair(atoi(articleId_s.c_str()), atoi(count_s.c_str())));
-        }
-        mymap[key] = temp;
-    }
-    infile.close();
-}
-
 
 /************************************************************************/
 /* 建立词袋子模型,构造词典
@@ -181,24 +150,30 @@ void PreProcess::ConstructDictionary(DICTIONARY &mymap, vector<string> wordcolle
     if (wordcollection.size() > 0)//如果不是空字段的话
     {
         for (vector<string>::iterator strit = wordcollection.begin(); strit != wordcollection.end(); strit++) {
-            vector<pair<int, int> >::reverse_iterator it;
+
             if (mymap[*strit].empty())//该词没有出现在字典中
             {
-                pair<int, int> mytemppair = make_pair(articleid, 1);
-                mymap[*strit].push_back(mytemppair);
+                map<int, int> mytemppair;
+                mytemppair[articleid]=1;
+                mymap[*strit]=mytemppair;
             }
             else//该词出现在词典中
             {
-                for (it = mymap[*strit].rbegin(); it != mymap[*strit].rend(); it++) {
-                    if (it->first == articleid) {
-                        it->second = ++(it->second);
-                        break;
-                    }
-                }
-                if (it == mymap[*strit].rend()) {
-                    pair<int, int> mytemppair = make_pair(articleid, 1);
-                    mymap[*strit].push_back(mytemppair);
-                }
+                //  map<int, int>cur=mymap[*strit];
+                //   for (it = mymap[*strit].rbegin(); it != mymap[*strit].rend(); it++) {
+                int cur=mymap[*strit][articleid];
+                cur++;
+                mymap[*strit][articleid]=cur;
+//                    it[articleid]=++(it[articleid]);
+//                    if (it->first == articleid) {
+//                        it->second = ++(it->second);
+//                        break;
+//                    }
+//                }
+//                if (it == mymap[*strit].rend()) {
+//                    pair<int, int> mytemppair = make_pair(articleid, 1);
+//                    mymapp[*strit]=mytemppair;
+//                }
             }
         }
     }
@@ -209,74 +184,6 @@ void PreProcess::ConstructDictionary(DICTIONARY &mymap, vector<string> wordcolle
     wordcollection.clear();
 
 }
-
-/************************************************************************/
-/* 保存词袋子模型到硬盘                                                                     */
-/************************************************************************/
-void PreProcess::SaveDictionary(DICTIONARY &mymap, const char *address) {
-
-    ofstream outfile(address, ios::binary | ios::trunc);
-    outfile << mymap.size() << endl;
-    map<string, vector<pair<int, int> > >::iterator it;
-    it = mymap.begin();
-    for (it = mymap.begin(); it != mymap.end(); it++) {
-        outfile << it->first << endl;
-        vector<pair<int, int> >::iterator subit;
-        outfile << it->second.size() << endl;
-        for (subit = (it->second).begin(); subit != (it->second).end(); ++subit) {
-            outfile << subit->first << " " << subit->second << " " << ";" << " ";
-        }
-        outfile << endl;
-    }
-    //outfile.write((char *)&mymap,sizeof(mymap));
-
-    outfile.close();
-    cout << "SaveDictionary Done!" << endl;
-
-
-}
-/************************************************************************/
-/* 将关联表保存到本地硬盘                                                                     */
-/************************************************************************/
-void PreProcess::SaveContingencyTable(CONTINGENCY &contingencyTable, char *address) {
-    ofstream outfile(address, ios::binary);
-    for (map<pair<string, string>, pair<int, int> >::iterator it = contingencyTable.begin();
-         it != contingencyTable.end(); it++) {
-        outfile << (it->first).first << " " << (it->first).second << " " << (it->second).first << " " <<
-        (it->second).second << endl;
-    }
-    outfile.close();
-
-
-}
-/************************************************************************/
-/* 将关联表信息从硬盘加载到内存                                                                     */
-/************************************************************************/
-void PreProcess::LoadContingencyTable(CONTINGENCY &contingencyTable, char *address) {
-    clock_t start, finish;
-    double totaltime;
-    start = clock();
-    ifstream infile(address, ios::binary);
-    string termtext = "";
-    string classLabel = "";
-    int presentNum = 0;//该term 在该classLabel下的文章中出现的次数(不计算出现重数)
-    int absentNum = 0;//该classLabel下的文章中不含有该term的文章数目
-    while (!infile.eof()) {
-        infile >> termtext;
-        infile >> classLabel;
-        infile >> presentNum;
-        infile >> absentNum;
-        pair<string, string> compoundKey = make_pair(termtext, classLabel);
-        pair<int, int> valinfo = make_pair(presentNum, absentNum);
-        contingencyTable[compoundKey] = valinfo;
-    }
-    infile.close();
-    finish = clock();
-    totaltime = (double) (finish - start) / CLOCKS_PER_SEC;
-    cout << "将contingencyTable加载到内存的时间为" << totaltime << endl;
-
-}
-
 
 /************************************************************************/
 /* 获得每个词的ContingencyTable
@@ -292,14 +199,13 @@ int PreProcess::GetContingencyTable(DICTIONARY &mymap, CONTINGENCY &contigencyTa
     double totaltime;
     start = clock();
     //对于词袋子模型中的每个词
-    for (map<string, vector<pair<int, int> > >::iterator mymap_it = mymap.begin();
-         mymap_it != mymap.end(); ++mymap_it) {
+    for (map<string, map<int, int> >::iterator mymap_it = mymap.begin();mymap_it != mymap.end(); ++mymap_it) {
         if (mymap_it->first != "" || mymap_it->first != " ") {
             for (map<string, vector<int> >::iterator articleId_name = articleIdsEachClass.begin(); //对于每个类别
                  articleId_name != articleIdsEachClass.end(); articleId_name++) {
                 int cntTheClass = int((articleId_name->second).size());//该类别共有文章数目
                 int termInTheClass = 0;//该词在该类中出现的次数
-                for (vector<pair<int, int> >::iterator name_articleId_it = (mymap_it->second).begin();
+                for (map<int, int>::iterator name_articleId_it = (mymap_it->second).begin();
                      name_articleId_it != (mymap_it->second).end(); name_articleId_it++) {
                     termInTheClass += count((articleId_name->second).begin(), articleId_name->second.end(),
                                             name_articleId_it->first);//name_articleId_it->first单词对应的文章id
@@ -338,12 +244,7 @@ vector<pair<string, double> > PreProcess::ChiSquareFeatureSelectionForPerclass(D
                                                                                vector<string> &tempvector,
                                                                                string classLabel) {
     int N = endIndex - beginIndex + 1;//总共的文章数目
-//    vector<string> tempvector;//词袋子中的所有词
     vector<pair<string, double> > chisquareInfo;
-//    for (auto it = mymap.begin(); it != mymap.end(); ++it) {
-//        tempvector.push_back(it->first);
-//    }
-//cout<<"tempvector:"<<tempvector<<endl;
     //计算卡方值
     for (vector<string>::iterator ittmp = tempvector.begin(); ittmp != tempvector.end(); ittmp++) {
         int N1 = int(mymap[*ittmp].size());
@@ -353,26 +254,11 @@ vector<pair<string, double> > PreProcess::ChiSquareFeatureSelectionForPerclass(D
         double N10 = N1 - N11;
         double N00 = N - N1 - N01;
         double chiValue = CalChiSquareValue(N11, N10, N01, N00);
-//        cout<<*ittmp;
         chisquareInfo.push_back(make_pair(*ittmp, chiValue));
     }
-//    cout<<"chisquareInfo:"<<chisquareInfo<<endl;
     //按照卡方值从大到小将这些词排列起来
     stable_sort(chisquareInfo.begin(), chisquareInfo.end(), isLarger);
-//    ofstream outfile("F:\\Cluster\\other.dat");
-//    int finalKeyWordsCount=0;
-//    for(vector<pair<string,double> >::size_type j=0;j<chisquareInfo.size();j++)
-//    {
-////        outfile<<chisquareInfo[j].first<<";"<<chisquareInfo[j].second<<endl;
-////        finalKeyWordsCount++;
-//        cout<<chisquareInfo[j].first<<";"<<chisquareInfo[j].second<<endl;
-//    }
-//    outfile.close();
-
-
     return chisquareInfo;
-
-
 }
 /************************************************************************/
 /* 卡方特征词选择算法                                                                     */
@@ -383,28 +269,28 @@ vector<string> PreProcess::ChiSquareFeatureSelection(vector<string> classLabels,
     clock_t start, finish;
     double totaltime;
     int totalTraingingCorpus = endIndex - beginIndex + 1;//训练语料库总共的文章数目
-    cout << totalTraingingCorpus << endl;
+//    cout<<endIndex<<" "<<beginIndex<<endl;
+    cout << "totalTraingingCorpus:"<<totalTraingingCorpus << endl;
     set<string> finalKeywords;//存放最终遴选出的特征词
     vector<pair<string, double> > chisquareInfo;
     start = clock();
     vector<string> tempvector;//词袋子中的所有词
-    for (map<string, vector<pair<int, int> > >::iterator it = mymap.begin(); it != mymap.end(); ++it) {
+    for (map<string, map<int, int> >::iterator it = mymap.begin(); it != mymap.end(); ++it) {
         tempvector.push_back(it->first);
     }
     for (vector<string>::iterator it = classLabels.begin(); it != classLabels.end(); it++) {
         //训练语料库中某个类别的文章数目
         int N_subClassCnt = int(articleIdinEachClass[*it].size());
         //threshold决定每个类别遴选多少个特征词
-        int threshold = N_subClassCnt * N / totalTraingingCorpus;
-        cout << tempvector.size() << endl;
+        int threshold= N_subClassCnt * N / totalTraingingCorpus;
+//        int threshold = N_subClassCnt;
+//        cout << tempvector.size() << endl;
         chisquareInfo = ChiSquareFeatureSelectionForPerclass(mymap, contingencyTable, tempvector, *it);
         cout << threshold << "  " << *it << ":" << chisquareInfo.size() << endl;
         for (vector<pair<string, double> >::size_type j = 0; j < chisquareInfo.size() && j < threshold; j++) {
             finalKeywords.insert(chisquareInfo[j].first);
         }
-
         chisquareInfo.clear();
-
     }
     int finalKeyWordsCount = int(finalKeywords.size());
     ofstream outfile(KEYWORDS_PATH);
@@ -425,21 +311,21 @@ vector<string> PreProcess::ChiSquareFeatureSelection(vector<string> classLabels,
 /* 获得特征词的maxTF,DF                                                 */
 /************************************************************************/
 vector<pair<int, int> >PreProcess::GetfinalKeysMaxTFDF(DICTIONARY &mymap, vector<string> &mykeys) {
-    vector<pair<int, int> > maxTFandDF;
-    for (vector<string>::iterator it = mykeys.begin(); it != mykeys.end(); it++) {
-        int DF = mymap[*it].size();
-        int maxTF = 0;
-        for (vector<pair<int, int> >::iterator subit = mymap[*it].begin(); subit != mymap[*it].end(); subit++) {
-            if (subit->second > maxTF) {
-                maxTF = subit->second;
-            }
-
-        }
-        maxTFandDF.push_back(make_pair(maxTF, DF));
-        //find_if(mymap[*it].begin(),mymap[*it].end(),
-    }
-    return maxTFandDF;
+//    vector<pair<int, int> > maxTFandDF;
+//    for (vector<string>::iterator it = mykeys.begin(); it != mykeys.end(); it++) {
+//        int DF = mymap[*it].size();
+//        int maxTF = 0;
+//        for (vector<pair<int, int> >::iterator subit = mymap[*it].begin(); subit != mymap[*it].end(); subit++) {
+//            if (subit->second > maxTF) {
+//                maxTF = subit->second;
+//            }
+//        }
+//        maxTFandDF.push_back(make_pair(maxTF, DF));
+//        //find_if(mymap[*it].begin(),mymap[*it].end(),
+//    }
+//    return maxTFandDF;
 }
+
 /************************************************************************/
 /* 文档向量模型归一化                                                                     */
 /************************************************************************/
@@ -464,24 +350,45 @@ int  PreProcess::VSMConstruction(DICTIONARY &mymap, DOCMATRIX &trainingsetVSM, v
     clock_t start, finish;
     double totaltime;
     start = clock();
-    int corpus_N = endIndex - beginIndex + 1;
+    int corpus_N = 8000;
 
-    vector<pair<int, int> > maxTFandDF = GetfinalKeysMaxTFDF(mymap, myKeys);
+//    vector<pair<int, int> > maxTFandDF = GetfinalKeysMaxTFDF(mymap, myKeys);
     for (int i = beginIndex; i <= endIndex; i++) {
-        cout << i << endl;
         vector<pair<int, double> > tempVSM;
         vector<double> tempVSM2;
         for (vector<string>::size_type j = 0; j < myKeys.size(); j++) {
-            //vector<pair<int,int> >::iterator findit=find_if(mymap[myKeys[j]].begin(),mymap[myKeys[j]].end(),PredTFclass(i));
-            double TF = (double) count_if(mymap[myKeys[j]].begin(), mymap[myKeys[j]].end(), PredTFclass(i));
-            TF = 0.5 + (double) TF / (maxTFandDF[j].first);
-            double IDF = log((double) corpus_N / (maxTFandDF[j].second + 1));
+//            double TF = (double) count_if(mymap[myKeys[j]].begin(), mymap[myKeys[j]].end(), PredTFclass(i));
+            double TF=0;
+            double IDF;
+            TF=mymap[myKeys[j]][i];
+//            for (map<int, int>::iterator mymap_it = mymap[myKeys[j]].begin();mymap_it != mymap[myKeys[j]].end(); ++mymap_it) {
+//               if(mymap_it->first==i){
+//                   TF=mymap_it->second;
+//                   break;
+//               }
+//            }
+            IDF=log(corpus_N/(mymap[myKeys[j]].size()+1));
+//            if(i==1)
+            idfs.insert(map<int,double>::value_type(j,IDF));
+//            cout<<myKeys[j]<<endl;
+//            if(TF!=0)
+//                cout<<"TF:"<<j<<" "<<i<<" "<<TF<<endl;
+
+//            cout<<mymap[myKeys[j]]<<endl;
+
+//            cout<<TF<<" ";
+//            TF = 0.5 + TF / (maxTFandDF[j].first);
+//            double IDF = log((double) corpus_N / (maxTFandDF[j].second + 1));
             double TF_IDF = TF * IDF;
+//            if(j==0|j==1)
+//                cout<<myKeys[j]<<mymap[myKeys[j]].size()<<" "<<TF<<" "<<IDF<<" "<<TF_IDF<<endl;
+
             tempVSM.push_back(make_pair(j, TF_IDF));
 
         }
+
         if (!tempVSM.empty()) {
-            tempVSM = NormalizationVSM(tempVSM);
+//            tempVSM = NormalizationVSM(tempVSM);
             //
             for (vector<pair<int, double> >::iterator it = tempVSM.begin(); it != tempVSM.end(); it++) {
                 tempVSM2.push_back(it->second);
@@ -501,7 +408,7 @@ int  PreProcess::VSMConstruction(DICTIONARY &mymap, DOCMATRIX &trainingsetVSM, v
 /************************************************************************/
 /* 获得待分类文档集合的VSM模型                                            */
 /************************************************************************/
-int  PreProcess::VSMConstructionForTest(vector<string> news, unordered_set<string> stopwords,
+int  PreProcess::VSMConstructionForTest(int corpus_N, vector<string> news, unordered_set<string> stopwords,
                                         DICTIONARY &mymap, DOCMATRIX &testingsetVSM, vector<string> keywords) {
     clock_t start, finish;
     double totaltime;
@@ -511,37 +418,145 @@ int  PreProcess::VSMConstructionForTest(vector<string> news, unordered_set<strin
     vector<string> words;
     // 使用迭代器 iterator 访问值
     vector<string>::iterator v = news.begin();
+    int ii=0;
     while (v != news.end()) {
-        words.clear();
+        ii++;
+        cout<<"Test: "<<ii<<endl;
         i++;
         jieba.CutForSearch(*v, words);
         vector<string> wordcollection = limonp::Seg(words.begin(), words.end(), stopwords);//表示这篇文章的词
-        vector<pair<int, int> > maxTFandDF = GetfinalKeysMaxTFDF(mymap, keywords);
-        int corpus_N = 180;
+        //   vector<pair<int, int> > maxTFandDF = GetfinalKeysMaxTFDF(mymap, keywords);
         vector<pair<int, double> > tempVSM;
         vector<double> vsm;
+
+
         for (vector<string>::size_type j = 0; j < keywords.size(); j++) {
-            double TF = (double) count_if(wordcollection.begin(), wordcollection.end(), GT_cls(keywords[j]));
-            TF = 0.5 + (double) TF / (maxTFandDF[j].first);
-            TF *= log((double) corpus_N / maxTFandDF[j].second);
-            tempVSM.push_back(make_pair(j, TF));
+//            double TF = (double) count_if(mymap[myKeys[j]].begin(), mymap[myKeys[j]].end(), PredTFclass(i));
+            double TF=0;
+            double IDF;
+            TF=count(wordcollection.begin(),wordcollection.end(),keywords[j]);
+//            TF=mymap[keywords[j]][i];
+//            for ( vector<pair<int, int>  >::iterator mymap_it = mymap[keywords[j]].begin();mymap_it != mymap[keywords[j]].end(); ++mymap_it) {
+//                if(mymap_it->first==i){
+//                    TF=mymap_it->second;
+//                    break;
+//                }
+//
+//            }
+            IDF=idfs[j];
+
+            double TF_IDF = TF * IDF;
+            tempVSM.push_back(make_pair(j, TF_IDF));
+
         }
+
+
+
+
+//        for (vector<string>::size_type j = 0; j < keywords.size(); j++) {
+//            double TF = (double) count(wordcollection.begin(), wordcollection.end(), keywords[j]);
+////            TF = 0.5 + (double) TF / (maxTFandDF[j].first);
+////            TF *= log((double) corpus_N / maxTFandDF[j].second);
+//
+//            TF = 0.5 + TF / (maxTFandDF[j].first);
+//            double IDF = log((double) corpus_N / (maxTFandDF[j].second + 1));
+//            double TF_IDF = TF * IDF;
+//
+//            tempVSM.push_back(make_pair(j, TF_IDF));
+//        }
         if (!tempVSM.empty()) {
-            tempVSM = NormalizationVSM(tempVSM);
+//            tempVSM = NormalizationVSM(tempVSM);
             for (vector<pair<int, double> >::iterator it = tempVSM.begin(); it != tempVSM.end(); it++) {
                 vsm.push_back(it->second);
             }
             testingsetVSM[i] = vsm;
         }
         v++;
+        tempVSM.clear();
+        words.clear();
     }
 
     finish = clock();
     totaltime = totaltime = (double) (finish - start) / CLOCKS_PER_SEC;
     cout << "为测试集合建立VSM模型共耗时" << totaltime << endl;
-
     return testingsetVSM.size() > 0;
 }
+
+
+/************************************************************************/
+/*  将VSM模型序列化到本地硬盘                                                                    */
+/************************************************************************/
+void PreProcess::SaveVSM(DOCMATRIX& VSMmatrix,const char* dest, map<int,string> &idToLable,vector<string> &lables)
+{
+    map<string,int>mm;
+    int index=0;
+    vector<string>::iterator it;
+    for(it=lables.begin();it!=lables.end();it++){
+        index++;
+        mm[*it]=index;
+    }
+//cout<<mm<<endl;
+    clock_t start,finish;
+    double totaltime;
+    start=clock();
+    ofstream ofile(dest,ios::binary);
+    for(map<int,vector<double> >::iterator it=VSMmatrix.begin();it!=VSMmatrix.end();++it)
+    {
+        ofile<<mm[idToLable[it->first]]<<" ";
+        vector<double>::iterator subit;
+        int index =1;
+        for(subit=(it->second).begin();subit!=(it->second).end();++subit)
+        {
+            ofile<<index<<":"<<*subit<<" ";
+            index++;
+        }
+        ofile<<endl;
+    }
+    ofile.close();
+    idToLable.clear();
+    finish=clock();
+    totaltime=(double)(finish-start)/CLOCKS_PER_SEC;
+    cout<<"将语料库集合的VSM模型为序列化到硬盘的时间为"<<totaltime<<endl;
+
+
+}
+
+/************************************************************************/
+/*  将VSM模型序列化到本地硬盘                                                                    */
+/************************************************************************/
+void PreProcess::SaveVSMForTest(DOCMATRIX& VSMmatrix,const char* dest, map<int,string> &idToLable,vector<string> &lables)
+{
+    map<string,int>mm;
+    int index=0;
+    vector<string>::iterator it;
+    for(it=lables.begin();it!=lables.end();it++){
+        index++;
+        mm[*it]=index;
+    }
+    clock_t start,finish;
+    double totaltime;
+    start=clock();
+    ofstream ofile(dest,ios::binary);
+    for(map<int,vector<double> >::iterator it=VSMmatrix.begin();it!=VSMmatrix.end();++it) {
+
+        ofile << mm[idToLable[it->first]] << " ";
+        vector<double>::iterator subit;
+        int index = 1;
+        for (subit = (it->second).begin(); subit != (it->second).end(); ++subit) {
+            ofile << index << ":" << *subit << " ";
+            index++;
+        }
+        ofile << endl;
+
+    }
+    ofile.close();
+    finish=clock();
+    totaltime=(double)(finish-start)/CLOCKS_PER_SEC;
+    cout<<"将语料库集合的VSM模型为序列化到硬盘的时间为"<<totaltime<<endl;
+
+
+}
+
 
 /**计算向量内积*/
 double PreProcess::CalDotProductOfVectors(const vector<double> &vector1, const vector<double> &vector2) {
@@ -578,23 +593,11 @@ string PreProcess::KNNClassificationCell(int N, map<int, string> &idToLable, vec
     }
     //将相似度运算结果从高到底排序
     stable_sort(SimilaritySore.begin(), SimilaritySore.end(), isLarger2);
-//    ostringstream out;
     string articleIds;
     vector<string> labels;
-//    out << "(";
-//    int putComma = 0;
     for (vector<pair<int, double> >::size_type j = 0; j < N; j++) {
-//        out << SimilaritySore[j].first;
         labels.push_back(idToLable[SimilaritySore[j].first]);
-//        if (putComma < N - 1) {
-//            out << ",";
-//        }
-//        putComma++;
     }
-//    out << ")";
-//    articleIds = out.str();//获得和待分类文档距离最近的前N个文档的id字符串
-//    cout << articleIds << "AAAAAAAAAAAAAAAAAAA" << endl;
-//    vector<string> labels = GetClassification(articleIds, tablename);
     for (vector<string>::iterator it = labels.begin(); it != labels.end(); it++) {
         trim(*it, " ");
     }
@@ -623,7 +626,7 @@ void PreProcess::KNNclassifier(DOCMATRIX &trainingsetVSM, DOCMATRIX &testingsetV
         string label = KNNClassificationCell(N, idToLable, (it->second), catigorization, trainingsetVSM);
         int id = it->first;
         temp = make_pair(id, label);
-        //cout<<"文章标号"<<temp.first<<"归为类别"<<temp.second<<endl;
+        cout<<"文章标号"<<temp.first<<"归为类别"<<temp.second<<endl;
 
         classifyResults.push_back(temp);
 
@@ -632,6 +635,4 @@ void PreProcess::KNNclassifier(DOCMATRIX &trainingsetVSM, DOCMATRIX &testingsetV
     totaltime = (double) (finish - start) / CLOCKS_PER_SEC;
     cout << "对测试集进行KNN分类的时间为" << totaltime << endl;
     //return classifyResults;
-
-
 }

@@ -1,12 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/PreProcess.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/utils/utils.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/HMMModel.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/common.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/DictTrie.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/QuerySegment.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/Preprocess.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/PreFilter.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/Colors.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/Condition.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/Closure.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/FileLock.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/StringUtil.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/LocalVector.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/ThreadPool.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/MutexLock.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/BoundedBlockingQueue.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/BlockingQueue.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/NonCopyable.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/ArgvContext.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/BoundedQueue.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/Config.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/Thread.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/StdExtension.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/Logging.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/ForcePublic.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/limonp/Md5.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/KeywordExtractor.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/TransCode.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/PosTagger.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/SegmentBase.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/Trie.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/LevelSegment.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/MPSegment.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/HMMSegment.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/Jieba.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/MixSegment.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cppjieba/FullSegment.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PreProcess.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TextClassification.cpp" isTestSource="false" />
+    </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="Header Search Paths">
-        <CLASSES />
-        <SOURCES />
+        <CLASSES>
+          <root url="file:///usr/include" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+          <root url="file:///usr/local/include" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file:///usr/include" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+          <root url="file:///usr/local/include" />
+        </SOURCES>
       </library>
     </orderEntry>
   </component>
