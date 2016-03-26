@@ -101,7 +101,7 @@ void PreProcess::preProcessedText( map<string,string> &filesPath,vector<string> 
     news.clear();
     articleIdinEachClass.clear();
     int index = 0;
-    ofstream ofile("dict/vsmmmmmm",ios::binary);
+//    ofstream ofile("dict/vsmmmmmm",ios::binary);
 
     for(map<string,string>::iterator it=filesPath.begin();it!=filesPath.end();it++){
         index++;
@@ -112,13 +112,13 @@ void PreProcess::preProcessedText( map<string,string> &filesPath,vector<string> 
             fin>>buffer;
             article+=buffer;
         }
-        ofile <<article<<endl;
+//        ofile <<article<<endl;
         fin.close();
         news.push_back(article);
         idToLable[index] = it->second;
         articleIdinEachClass[it->second].push_back(index);
     }
-    ofile.close();
+//    ofile.close();
 }
 
 //分词并构建词袋模型

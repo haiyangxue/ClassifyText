@@ -15,68 +15,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d14a7ea1-6eca-4b0d-b960-ae38a888153c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/test.prop" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/utils.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/utils.h" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dict/corpus.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dict/test.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PreProcess.o" afterPath="$PROJECT_DIR$/PreProcess.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TextClassification.o" afterPath="$PROJECT_DIR$/TextClassification.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main" afterPath="$PROJECT_DIR$/main" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/test.iml" afterPath="$PROJECT_DIR$/.idea/test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PreProcess.cpp" afterPath="$PROJECT_DIR$/PreProcess.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PreProcess.h" afterPath="$PROJECT_DIR$/PreProcess.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TextClassification.cpp" afterPath="$PROJECT_DIR$/TextClassification.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/DictTrie.hpp" afterPath="$PROJECT_DIR$/cppjieba/DictTrie.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/FullSegment.hpp" afterPath="$PROJECT_DIR$/cppjieba/FullSegment.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/HMMModel.hpp" afterPath="$PROJECT_DIR$/cppjieba/HMMModel.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/HMMSegment.hpp" afterPath="$PROJECT_DIR$/cppjieba/HMMSegment.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/Jieba.hpp" afterPath="$PROJECT_DIR$/cppjieba/Jieba.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/KeywordExtractor.hpp" afterPath="$PROJECT_DIR$/cppjieba/KeywordExtractor.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/LevelSegment.hpp" afterPath="$PROJECT_DIR$/cppjieba/LevelSegment.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/MPSegment.hpp" afterPath="$PROJECT_DIR$/cppjieba/MPSegment.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/MixSegment.hpp" afterPath="$PROJECT_DIR$/cppjieba/MixSegment.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/PosTagger.hpp" afterPath="$PROJECT_DIR$/cppjieba/PosTagger.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/PreFilter.hpp" afterPath="$PROJECT_DIR$/cppjieba/PreFilter.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/Preprocess.h" afterPath="$PROJECT_DIR$/cppjieba/Preprocess.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/QuerySegment.hpp" afterPath="$PROJECT_DIR$/cppjieba/QuerySegment.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/SegmentBase.hpp" afterPath="$PROJECT_DIR$/cppjieba/SegmentBase.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/TransCode.hpp" afterPath="$PROJECT_DIR$/cppjieba/TransCode.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/Trie.hpp" afterPath="$PROJECT_DIR$/cppjieba/Trie.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/common.h" afterPath="$PROJECT_DIR$/cppjieba/common.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/ArgvContext.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/ArgvContext.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/BlockingQueue.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/BlockingQueue.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/BoundedBlockingQueue.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/BoundedBlockingQueue.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/BoundedQueue.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/BoundedQueue.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/Closure.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/Closure.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/Colors.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/Colors.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/Condition.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/Condition.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/Config.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/Config.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/FileLock.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/FileLock.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/ForcePublic.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/ForcePublic.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/LocalVector.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/LocalVector.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/Logging.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/Logging.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/Md5.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/Md5.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/MutexLock.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/MutexLock.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/NonCopyable.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/NonCopyable.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/StdExtension.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/StdExtension.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/StringUtil.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/StringUtil.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/Thread.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/Thread.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cppjieba/limonp/ThreadPool.hpp" afterPath="$PROJECT_DIR$/cppjieba/limonp/ThreadPool.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/README.md" afterPath="$PROJECT_DIR$/dict/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/hmm_model.utf8" afterPath="$PROJECT_DIR$/dict/hmm_model.utf8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/idf.utf8" afterPath="$PROJECT_DIR$/dict/idf.utf8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/jieba.dict.utf8" afterPath="$PROJECT_DIR$/dict/jieba.dict.utf8" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/keywords" afterPath="$PROJECT_DIR$/dict/keywords" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/pos_dict/char_state_tab.utf8" afterPath="$PROJECT_DIR$/dict/pos_dict/char_state_tab.utf8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/pos_dict/prob_emit.utf8" afterPath="$PROJECT_DIR$/dict/pos_dict/prob_emit.utf8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/pos_dict/prob_start.utf8" afterPath="$PROJECT_DIR$/dict/pos_dict/prob_start.utf8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/pos_dict/prob_trans.utf8" afterPath="$PROJECT_DIR$/dict/pos_dict/prob_trans.utf8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/stop_words.utf8" afterPath="$PROJECT_DIR$/dict/stop_words.utf8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict/user.dict.utf8" afterPath="$PROJECT_DIR$/dict/user.dict.utf8" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,9 +44,57 @@
       <file leaf-file-name="TextClassification.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TextClassification.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8597843">
-              <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.11042945">
+              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="libsvm.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libsvm.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="7.2">
+              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="svm-predict.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/svm-predict.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="svm-train.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/svm-train.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="svm-scale.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/svm-scale.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="397" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/Makefile">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -132,21 +124,9 @@
       <file leaf-file-name="PreProcess.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PreProcess.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="33.8">
-              <caret line="543" column="22" selection-start-line="543" selection-start-column="22" selection-end-line="543" selection-end-column="22" />
+            <state vertical-scroll-proportion="12.142858">
+              <caret line="104" column="0" selection-start-line="102" selection-start-column="18" selection-end-line="104" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utils.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/utils.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-              <folding>
-                <marker date="1458722184665" expanded="true" signature="1539:2223" placeholder="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -155,20 +135,8 @@
         <entry file="file://$PROJECT_DIR$/dict/keywords">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1866" column="3" selection-start-line="1866" selection-start-column="3" selection-end-line="1866" selection-end-column="3" />
+              <caret line="2733" column="3" selection-start-line="2733" selection-start-column="3" selection-end-line="2733" selection-end-column="3" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utils.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/utils.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-              <folding>
-                <element signature="e#71#90#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -219,6 +187,7 @@
         <option value="$PROJECT_DIR$/utils/utils.cpp" />
         <option value="$PROJECT_DIR$/utils/test.prop" />
         <option value="$PROJECT_DIR$/PreProcess.h" />
+        <option value="$PROJECT_DIR$/libsvm.cpp" />
         <option value="$PROJECT_DIR$/PreProcess.cpp" />
         <option value="$PROJECT_DIR$/TextClassification.cpp" />
       </list>
@@ -317,7 +286,7 @@
       <recent name="$PROJECT_DIR$/dict" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.demo">
+  <component name="RunManager" selected="Application.TextClassification">
     <configuration default="true" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Project" TARGET_NAME="demo" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
       <envs />
       <method />
@@ -393,19 +362,19 @@
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23197116" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294347" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12062257" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12015504" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34104937" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294347" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294347" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28166914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34104937" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -426,42 +395,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TextClassification.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PreProcess.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="85" selection-start-line="76" selection-start-column="85" selection-end-line="76" selection-end-column="85" />
-          <folding>
-            <element signature="e#45#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PreProcess.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="352" column="20" selection-start-line="352" selection-start-column="20" selection-end-line="352" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/utils.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-          <folding>
-            <marker date="1458722184665" expanded="true" signature="1539:2223" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dict/keywords">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -704,7 +637,7 @@
     <entry file="file://$PROJECT_DIR$/dict/keywords">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1866" column="3" selection-start-line="1866" selection-start-column="3" selection-end-line="1866" selection-end-column="3" />
+          <caret line="2733" column="3" selection-start-line="2733" selection-start-column="3" selection-end-line="2733" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -730,23 +663,63 @@
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libsvm.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="7.2">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svm-train.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svm-scale.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="397" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svm-predict.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PreProcess.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="33.8">
-          <caret line="543" column="22" selection-start-line="543" selection-start-column="22" selection-end-line="543" selection-end-column="22" />
+        <state vertical-scroll-proportion="12.142858">
+          <caret line="104" column="0" selection-start-line="102" selection-start-column="18" selection-end-line="104" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TextClassification.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8597843">
-          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.11042945">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
           <folding />
         </state>
       </provider>

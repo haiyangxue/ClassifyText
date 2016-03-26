@@ -29,7 +29,7 @@ int main(int argc, char **argv) {
     CONTINGENCY contigencyTable;
     p.GetContingencyTable(mymap,contigencyTable,articleIdinEachClass);
     cout<<labels<<endl;
-    vector<string> keywords= p.ChiSquareFeatureSelection(labels,mymap,contigencyTable,articleIdinEachClass,2000);
+    vector<string> keywords= p.ChiSquareFeatureSelection(labels,mymap,contigencyTable,articleIdinEachClass,3000);
     contigencyTable.clear();
 //    //为训练集建立VSM模型
     DOCMATRIX trainingSetVSM;
@@ -49,5 +49,6 @@ int main(int argc, char **argv) {
     clock_t finish = clock();
     double totaltime = (double) (finish - start) / CLOCKS_PER_SEC;
     cout << "对篇章分词的时间为" << totaltime << endl;
+    //parse_command_line(argc,"svm","svm.scale");
     return EXIT_SUCCESS;
 }
